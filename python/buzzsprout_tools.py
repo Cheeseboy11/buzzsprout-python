@@ -32,15 +32,20 @@ class BuzzsproutPodcasts:
                 
             episodes.append(self.__Episode(json, customurl))
 
+        # Error if no results
         if len(episodes) is 0:
             raise ValueError('No episodes returned for this query')
 
+        # Return only a single random episode, if the switch is set
         if random is True:
             self.episodes = self.__random_episode(episodes)
         else:
             self.episodes = episodes
 
     class __Episode:
+        """
+        An episode class that contains all of the required properties of a podcast episode.
+        """
         def __init__(self, json, customurl):
             self.title = json['title']
             self.audio_url = json['audio_url']
@@ -85,7 +90,7 @@ class BuzzsproutPodcasts:
 
     def __random_episode(self, episodes):
         """
-        Return a random episode from a given Buzzsprout profile.
+        Return a random episode from a list of episodes.
         """
         import random
 
