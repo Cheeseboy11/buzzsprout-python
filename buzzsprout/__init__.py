@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.7
 from datetime import datetime
 
-class BuzzsproutPodcasts:
+class Buzzsprout:
     """
     An object that contains all episodes that match the parameters.
     """
