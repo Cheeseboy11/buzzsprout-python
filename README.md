@@ -13,15 +13,15 @@ pip install buzzsprout
 ```
 
 ## Getting started
-By default, instatiating the BuzzsproutPodcasts class will populate the **episodes** property with a list of all episode objects for the profile:
+Instantiate the Buzzsprout class.
 ```
 $ from buzzsprout import Buzzsprout
-$ buzzsprout = Buzzsprout('profileid='PROFILEID', token='TOKEN')
+$ buzzsprout = Buzzsprout()
 ```
 
-You can then print out the list of all podcasts in the profile:
+You then pass your profile id and token into the **get** method. By default, this will pull all episodes:
 ```
-$ print(buzzsprout.episodes)
+$ buzzsprout.get('profileid='PROFILEID', token='TOKEN')
 ```
 
 ## Attributes
@@ -46,20 +46,20 @@ You can currently filter by:
 
 To return only episodes newer than 2019-03-01
 ```
-$ recent_episodes = Buzzsprout(profileid='PROFILEID', token='TOKEN', datefilter='2019-03-01')
+$ recent_episodes = buzzsprout.get(profileid='PROFILEID', token='TOKEN', datefilter='2019-03-01')
 ```
 To return only episodes that contain the tag "Interviews"
 ```
-$ interview_episodes = Buzzsprout(profileid='PROFILEID', token='TOKEN', tagfilter='Interviews')
+$ interview_episodes = buzzsprout.get(profileid='PROFILEID', token='TOKEN', tagfilter='Interviews')
 ```
 To return one random episode from the results, use the random switch
 ```
-$ random_episode = Buzzsprout(profileid='PROFILEID', token='TOKEN', random=True)
+$ random_episode = buzzsprout.get(profileid='PROFILEID', token='TOKEN', random=True)
 ```
 
 ## Things to note
 Weirdly, Buzzsprout's API does not return an episode URL. I have therefore implemented a *slightly* hacky solution which modifies the audio URL.
 By default this URL will not use any custom URL's you have set. I have therefore implemented a workaround. If you pass in your custom URL, the **episode_url** property will be updated:
 ```
-$ custom_url_episode = Buzzsprout(profileid='PROFILEID', token='TOKEN', random=True, customurl='subdomain.example.com')
+$ custom_url_episode = buzzsprout.get(profileid='PROFILEID', token='TOKEN', random=True, customurl='subdomain.example.com')
 ```

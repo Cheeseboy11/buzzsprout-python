@@ -1,7 +1,8 @@
+#!/usr/bin/env python3.7
 from setuptools import setup
 
 setup(name='buzzsprout',
-      version='0.1',
+      version='0.2',
       description='Buzzsprout Podcasts Python class',
       url='https://github.com/Harrtron/buzzsprout-python',
       author='Harley Thorne',
