@@ -59,7 +59,7 @@ $ random_episode = buzzsprout.get(profileid='PROFILEID', token='TOKEN', random=T
 ```
 
 ## Contributing
-Travis CI is setup to automatically deploy to PyPi. To update, just change the version number in setup.py.
+Travis CI is setup to automatically deploy to PyPi. To update, just change the version number in setup.py, and tag the commit with 'release'.
 Currently this skips testing.. I'm investigating testing currently (I have no experience of this), so that's why it's skipped.
 
 ## Things to note
