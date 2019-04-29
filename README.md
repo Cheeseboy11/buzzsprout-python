@@ -5,7 +5,7 @@ A Python BuzzsproutPodcasts class.
 * A Buzzsprout account (and your API token)
 
 ## Summary
-Provide an API Token and a Profile ID, to create a BuzzsproutPodcasts object containing all episodes for that profile matching the given parameters. 
+Provide an API Token and a Profile ID, to create a Buzzsprout object containing all episodes for that profile matching the given parameters. 
 
 ## Installation
 ```
