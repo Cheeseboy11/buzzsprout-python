@@ -1,4 +1,5 @@
 A Python Buzzsprout class.
+[![Build Status](https://travis-ci.org/Harrtron/buzzsprout-python.svg?branch=master)](https://travis-ci.org/Harrtron/buzzsprout-python)
 =======
 ## Prerequisites
 * Python 3.7 and above
@@ -56,6 +57,10 @@ To return one random episode from the results, use the random switch
 ```
 $ random_episode = buzzsprout.get(profileid='PROFILEID', token='TOKEN', random=True)
 ```
+
+## Contributing
+Travis CI is setup to automatically deploy to PyPi. To update, just change the version number in setup.py.
+Currently this skips testing.. I'm investigating testing currently (I have no experience of this), so that's why it's skipped.
 
 ## Things to note
 Weirdly, Buzzsprout's API does not return an episode URL. I have therefore implemented a *slightly* hacky solution which modifies the audio URL.
