@@ -1,0 +1,6 @@
+deploy:
+  provider: pypi
+  user: "harrtron"
+  password: $PYPI_PASSWORD
+  on:
+    branch: master
