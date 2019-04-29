@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
       f.close()
 
 setup(name='buzzsprout',
-      version='0.21',
+      version='0.22',
       description='Buzzsprout Podcasts Python class',
       url='https://github.com/Harrtron/buzzsprout-python',
       author='Harley Thorne',

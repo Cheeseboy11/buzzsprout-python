@@ -1,4 +1,4 @@
-A Python BuzzsproutPodcasts class.
+A Python Buzzsprout class.
 =======
 ## Prerequisites
 * Python 3.7 and above
