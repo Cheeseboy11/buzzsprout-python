@@ -24,8 +24,10 @@ class Buzzsprout:
             self.artist = json['artist']
             self.tags = json['tags']
             self.published_at = datetime.strptime(json['published_at'].split('T')[0], '%Y-%m-%d')
+            self.duration = json['duration']
             self.episode_number = json['episode_number']
             self.season_number = json['season_number']
+            self.total_plays = json['total_plays']
 
         def __repr__(self):
             return self.title
